@@ -1,5 +1,4 @@
-![Uploading image.png…]()
-
+![2ff5499e-0bf8-4ffc-b205-e496aca01204-5fe397b4e68ca](https://github.com/user-attachments/assets/cd7083a7-3c72-4a09-af5b-c2a33ce17ef2)
 
 YouTube Trends: Project of Foundations Of Computer Science
 
