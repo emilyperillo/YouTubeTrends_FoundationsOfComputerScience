@@ -11,7 +11,7 @@
 
 ## Project Overview
 
-This repository contains a comprehensive analysis of YouTube trending videos from **10 different countries**. The project leverages Python and the Pandas library to ingest, clean, and extract statistical insights from large datasets.
+This repository contains a complete analysis of YouTube trending videos from **10 different countries**. The project leverages Python and the Pandas library to ingest, clean, and extract statistical insights from large datasets.
 
 The primary objective was to process raw data to understand user engagement patterns, tag trends, and temporal distribution of video uploads.
 
@@ -50,13 +50,13 @@ The project workflow is divided into three main stages:
 
 ## Technical Stack
 
-* **Language:** Jupyer Notebook 
+* **Language:** Python (Jupyter Notebook) 
 * **Libraries:**
     * `pandas`: For data manipulation and aggregation.
     * `numpy`: For numerical operations.
     * `json`: For parsing category metadata.
  * **Additional packages needed:**
-    * zstd, in order to read zip files in the folders.
+    * `zstd`, in order to read zip files in the folders.
 
 ## Note on the use of AI tools
  * AI tools were only used as a means of support in case of code not running. AI languages did not write any code from scratch and the main support was the pandas documentation available online.
