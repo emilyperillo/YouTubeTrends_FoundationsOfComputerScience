@@ -1,22 +1,64 @@
 ![2ff5499e-0bf8-4ffc-b205-e496aca01204-5fe397b4e68ca](https://github.com/user-attachments/assets/cd7083a7-3c72-4a09-af5b-c2a33ce17ef2)
 
-YouTube Trends: Project of Foundations Of Computer Science
+# YouTube Trends Analysis
+### Foundations of Computer Science Project
 
-The repository contains an analysis of YouTube Trends of 10 countries conducted through the use of Python.
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat&logo=jupyter)
 
-For more details, the pojects consisted in:
-1. Creating a single dataframe with the concatenation of all input csv files, adding a column called country
-2. Extracingt all videos that have no tag.
-3. For each channel, determining the total number of views
-4. Saving all rows with disabled comments and disabled ratings, or that have video_error_or_removed in a new dataframe called excluded, and remove those rows from the original dataframe.
-5. Adding a like_ratio column storing the ratio between the number of likes and of dislikes
-6. Clustering the publish time into 10-minute intervals (e.g. from 02:20 to 02:30)
-7. For each interval, determining the number of videos, average number of likes and of dislikes.
-8. For each tag, determining the number of videos
-9. Finding the tags with the largest number of videos
-10. For each (tag, country) pair, computing average ratio likes/dislikes
-11. For each (trending_date, country) pair, the video with the largest number of views
-12. Dividing trending_date into three columns: year, month, day
-13. For each (month, country) pair, finding the video with the largest number of views
-14. Reading all json files with the video categories
-15. For each country, determining how many videos have a category that is not assignable.
+---
+
+## Project Overview
+
+This repository contains a comprehensive analysis of YouTube trending videos from **10 different countries**. The project leverages Python and the Pandas library to ingest, clean, and extract statistical insights from large datasets.
+
+The primary objective was to process raw data to understand user engagement patterns, tag trends, and temporal distribution of video uploads.
+
+---
+
+## Key Features & Methodology
+
+The project workflow is divided into three main stages:
+
+### 1. Data Ingestion & Cleaning
+* **Dataset Aggregation:** Concatenated multiple CSV files into a single dataframe, introducing a `country` column for geospatial distinction.
+* **Handling Missing Values:** Identified and extracted videos containing no tags.
+* **Filtering:** Created a separate `excluded` dataframe for videos with:
+    * `comments_disabled`
+    * `ratings_disabled`
+    * `video_error_or_removed`
+    * *Note: These records were removed from the primary analysis to ensure data quality.*
+
+### 2. Feature Engineering
+* **Engagement Metrics:** Calculated a `like_ratio` (Likes / Dislikes) for each video.
+* **Temporal Parsing:** Split the `trending_date` into distinct `Year`, `Month`, and `Day` columns for granular time-series analysis.
+* **Time Clustering:** Grouped video publish times into **10-minute intervals** (e.g., 02:20 - 02:30) to analyze upload patterns.
+
+### 3. Statistical Analysis & Insights
+* **Channel Performance:** Calculated total views per channel.
+* **Tag Analysis:**
+    * Counted total videos per tag.
+    * Identified the most frequently used tags.
+    * Computed the average *Like/Dislike ratio* for each `(tag, country)` pair.
+* **Trend Identification:**
+    * Identified the top-viewed video for each `(trending_date, country)` pair.
+    * Identified the top-viewed video for each `(month, country)` pair.
+* **Category Mapping:** Processed JSON files to map category IDs and quantified unassignable video categories per country.
+
+---
+
+## Technical Stack
+
+* **Language:** Jupyer Notebook 
+* **Libraries:**
+    * `pandas`: For data manipulation and aggregation.
+    * `numpy`: For numerical operations.
+    * `json`: For parsing category metadata.
+ * **Additional packages needed:**
+    * zstd, in order to read zip files in the folders.
+
+## Note on the use of AI tools
+ * AI tools were only used as a means of support in case of code not running. AI languages did not write any code from scratch and the main support was the pandas documentation available online.
+---
+*Project developed for the Foundations of Computer Science course.*
